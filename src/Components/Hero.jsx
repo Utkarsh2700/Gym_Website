@@ -1,14 +1,14 @@
-import React, { useRef } from "react";
-import Section from "./Section";
 import { curve, gym, heroBackground } from "../assets";
-import Button from "./Button";
+import Section from "./Section";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
-import { ScrollParallax } from "react-just-parallax";
-import { BackgroundShapes } from "./design/MyHero";
 import { heroIcons } from "../constants";
+import { ScrollParallax } from "react-just-parallax";
+import { useRef } from "react";
 import Generating from "./Generating";
-import Notification from "./Notification";
+import Button from "./Button";
 import CompnayLogos from "./CompnayLogos";
+import { BackgroundShapes } from "./design/MyHero";
+import Notification from "./Notification";
 const Hero = () => {
   const parallaxRef = useRef(null);
   return (
@@ -20,7 +20,7 @@ const Hero = () => {
       id="hero"
     >
       <div className="container relative" ref={parallaxRef}>
-        <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb:[6rem]">
+        <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
           <h1 className="h1 mb-6">
             Embark on Your Fitness Odyssey: Welcome to the Cosmos of{" "}
             <span className="inline-block relative">
@@ -49,13 +49,13 @@ const Hero = () => {
               <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490] ">
                 <img
                   src={gym}
-                  className="w-full "
+                  className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
                   width={1024}
                   height={490}
                   alt="gym"
                 />
 
-                <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w[31rem] md:-translate-x-1/2" />
+                <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
 
                 <ScrollParallax isAbsolutelyPositioned>
                   <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
@@ -77,7 +77,7 @@ const Hero = () => {
             </div>
             <Gradient />
           </div>
-          <div className="absolute -top-[33%] left-1/2 w-[234%] -translate-x-1/2 md:w-[138%] lg:-top-[104%]">
+          <div className="absolute -top-[33%] left-1/2 w-[234%] -translate-x-1/2  md:-top-[46%] md:w-[138%] lg:-top-[104%]">
             <img
               src={heroBackground}
               className="w-full"
